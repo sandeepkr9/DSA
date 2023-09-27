@@ -50,7 +50,6 @@ public class infix_postfix {
                 return "Invalid Expression";
             }
             return res+=stack.peek();
-            stack.pop();
         }
         return res;
     }
