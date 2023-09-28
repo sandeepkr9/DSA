@@ -10,37 +10,39 @@ public class basicStackUsingArray {
         return (top<0);
     }
     basicStackUsingArray(){
-        return;
+        top=-1;
     }
     boolean push(int x){
         if (top>=(MAX-1)){
             System.out.println("Stack Overflow");
             return false;
         }else {
+            arr[++top]=x;
             System.out.println(x);
             return true;
         }
     }
     int pop(){
-        if (top<0){
-            System.out.println("Stack Underflow");
-            return 0;
-        }else {
-            int x=arr[top-1];
+        if (top>=0){
+            int x=arr[top--];
             return x;
+        }else {
+            System.out.println("Stack Underflow");
+            return -1;
         }
     }
     int peek(){
         if (top<0){
             System.out.println("Stack Underflow");
-            return 0;
+            return -1;
         }else{
             int x=arr[top];
+            System.out.println(x);
             return x;
         }
     }
     void print(){
-        for (int i=top;i>=-1;i--){
+        for (int i=top;i>-1;i--){
             System.out.println(arr[i]);
         }
     }
@@ -50,10 +52,10 @@ public class basicStackUsingArray {
         sa.push(10);
         sa.push(20);
         sa.push(30);
-        System.out.println(sa.peek());
-        sa.pop();
+        sa.peek();
+        System.out.println(sa.pop());
         sa.push(40);
-        System.out.println(sa.peek());
+        sa.peek();
         sa.print();
     }
 }
