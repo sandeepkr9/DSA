@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 
 public class duplicate {
-
     //brute force technique
     static void findDuplicate(int arr[], int len) {
         HashSet<Integer> set = new HashSet<>();
