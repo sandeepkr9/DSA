@@ -29,7 +29,7 @@ public class basicOperation {
             System.out.println(node+"->");
             for (int i=0;i<adj.get(node).size();i++){
                 if (vis[adj.get(node).get(i)]==0){
-                    System.out.print(adj.get(node).get(i)+" ");
+                    System.out.print(adj.get(node).get(i)+"      ,");
                     queue.add(adj.get(node).get(i));
                 }
             }
