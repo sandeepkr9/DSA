@@ -21,7 +21,6 @@ public class diagonalTraversal {
         Vector<Integer> k=printDiagonal.get(d);
         if (k==null){
             k=new Vector<>();
-            k.add(root.key);
         }else {
             k.add(root.key);
         }
